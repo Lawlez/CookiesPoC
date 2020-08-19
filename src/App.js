@@ -1,8 +1,13 @@
 import React from 'react'
+import Login from './Login'
+import PageNotFound from './PageNotFound'
 
 function App() {
     return (
-        <h1>VELUX STIFTUNG</h1>
+        <>
+        <Login/>
+        {/*<PageNotFound/>*/}
+    </>
     )
 }
 
