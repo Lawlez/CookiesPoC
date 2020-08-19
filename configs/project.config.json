@@ -1,0 +1,43 @@
+{
+    "APP_CONFIG": {
+        "ERROR_FEEDBACK_ADDRESSES": {
+            "description": "E-Mail Adressen für Supportanfragen",
+            "value": {
+                "to": [
+                    "dominik.feger@abf.ch"
+                ]
+            }
+        },
+        "CONTACT_ADDRESSES": {
+            "description": "E-Mail Adressen für Kontaktanfragen",
+            "value": {
+                "to": [
+                    "ben.weber@abf.ch"
+                ]
+            }
+        },
+        "API": {
+            "description": "Production API servers would be defined here.",
+            "value": {
+                "default": {
+                    "host": "https://abfvmze06.abf.local:8874/DEV"
+                },
+                "auth": {
+                    "host": "https://abfvmze06.abf.local:8874/DEV/api"
+                },
+                "foundation": {
+                    "host": "https://abfvmze06.abf.local:8874/DEV"
+                },
+                "velux": {
+                    "host": "https://abfvmze06.abf.local:8874/DEV/igeko"
+                }
+            }
+        },
+        "DEBUG": {
+            "description": "Turn off all Debugging tools",
+            "MIRAGE_MOCK_API": false,
+            "RHF_DEVTOOL": false,
+            "BUNDLE_ANALYZER": false
+        }
+    }
+}
