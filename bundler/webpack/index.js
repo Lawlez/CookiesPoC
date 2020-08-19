@@ -30,6 +30,7 @@ if (mode !== 'build') {
     /** Für dev / prod "self" hinzufügen damit Hot Reloading gewährleistet
      * werden kann */
     connectSources.push("'self'")
+    connectSources.push("wss://osxdev.abf.local:8081/")
 }
 try {
     // Hier extrahieren wir die API Hosts aus der Konfiguration die wir für

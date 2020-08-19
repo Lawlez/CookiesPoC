@@ -8,15 +8,33 @@ import { Button,
     Typography } from '@material-ui/core'
 import useStyles from './index.styles'
 import axios from 'axios'
+import storageHandler from '../storageHandler'
+
 const Login = () => {
     /*const {
         actions: { login },
         state: { loggingIn },
     } = useBasicAuth()*/
+    console.log(storageHandler)
     const classes = useStyles()
 const loggingIn = false
-const login = (data) => {
-    console.log(data)
+const login = (e) => {
+    console.log(e)
+e.preventDefault()
+
+    axios.post('https://osxdev.abf.local:443/api/login', {
+        username: 'dfeger',
+        password: 'manager'
+      })
+      .then(function (response) {
+        console.log(response)
+        storageHandler.set('cubelineToken', response.data.accessToken , +response.data.expires)
+
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+      console.log(storageHandler.get('cubelineToken'))
 }
     return (
                 <Container
@@ -64,7 +82,6 @@ const login = (data) => {
                                             fullWidth
                                             disabled={loggingIn}
                                         />
-
                                     </div>
                                     <div className={classes.actions}>
                                         <Button
