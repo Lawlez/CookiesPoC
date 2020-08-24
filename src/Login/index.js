@@ -20,13 +20,15 @@ const Login = () => {
   console.log(storageHandler);
   const classes = useStyles();
   const loggingIn = false;
-
   storageHandler.set(
-    "cubelineToken",
+    "bensToken",
     "ben ishc recht geil man",
-    new Date() + 360000
+    1440,
+    "Secure; SameSite=Strict"
   );
+
   console.log(storageHandler.get("cubelineToken"));
+
   const login = (e) => {
     console.log(e);
     e.preventDefault();
@@ -37,11 +39,12 @@ const Login = () => {
         username: "dfeger",
         password: "manager",
       })
-      .then(function (response) {
+      .then((response) => {
         storageHandler.set(
           "cubelineToken",
           response.data.accessToken,
-          +response.data.expires
+          +response.data.expires,
+          "Secure; SameSite=Strict"
         );
 
         console.log(storageHandler.get("cubelineToken"));
@@ -53,7 +56,7 @@ const Login = () => {
               Authorization: `Bearer ${response.data.accessToken}`,
             },
           })
-          .then(function (response) {
+          .then((response) => {
             console.log(response);
             storageHandler.set("orgs", response.data);
 
@@ -72,22 +75,23 @@ const Login = () => {
                   },
                 }
               )
-              .then(function (response) {
+              .then((response) => {
                 console.log(response);
                 storageHandler.set("env", response.data);
               })
-              .catch(function (error) {
+              .catch((error) => {
                 console.log(error);
               });
           })
-          .catch(function (error) {
+          .catch((error) => {
             console.log(error);
           });
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
       });
   };
+
   return (
     <Container maxWidth="xs" disableGutters>
       <Paper elevation={2} className={classes.papier}>

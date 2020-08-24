@@ -8780,10 +8780,9 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
-store@^2.0.12:
+"store@https://github.com/Lawlez/store.js-but-secure.git/#b53249dc28c4f64dd7919beae97511a00848fdec":
   version "2.0.12"
-  resolved "https://registry.yarnpkg.com/store/-/store-2.0.12.tgz#8c534e2a0b831f72b75fc5f1119857c44ef5d593"
-  integrity sha1-jFNOKguDH3K3X8XxEZhXxE711ZM=
+  resolved "https://github.com/Lawlez/store.js-but-secure.git/#b53249dc28c4f64dd7919beae97511a00848fdec"
 
 stream-browserify@^2.0.1:
   version "2.0.2"
