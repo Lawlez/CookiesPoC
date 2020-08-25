@@ -4,7 +4,7 @@
             "description": "E-Mail Adressen für Supportanfragen",
             "value": {
                 "to": [
-                    "dominik.feger@abf.ch"
+                    "dominik@y.ch"
                 ]
             }
         },
@@ -12,7 +12,7 @@
             "description": "E-Mail Adressen für Kontaktanfragen",
             "value": {
                 "to": [
-                    "ben.weber@abf.ch"
+                    "x@y.ch"
                 ]
             }
         },
@@ -20,16 +20,7 @@
             "description": "Production API servers would be defined here.",
             "value": {
                 "default": {
-                    "host": "https://abfvmze06.abf.local:8874/DEV"
-                },
-                "auth": {
-                    "host": "https://abfvmze06.abf.local:8874/DEV/api"
-                },
-                "foundation": {
-                    "host": "https://abfvmze06.abf.local:8874/DEV"
-                },
-                "velux": {
-                    "host": "https://abfvmze06.abf.local:8874/DEV/igeko"
+                    "host": "https://osxdev.abf.local:420"
                 }
             }
         },
