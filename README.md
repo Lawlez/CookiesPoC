@@ -1,6 +1,8 @@
 
 # ITP Cookies & storage Proof of Concept
 
+![ITP image](https://i.imgur.com/Y4YhTUP.png)
+
 #### This is a PoC of how to cope with Browser making stricter rules for cross origin resources
 
  Cookies for cross-site resources are now blocked by default across the board. This is a significant improvement for privacy since it removes any sense of exceptions or “a little bit of cross-site tracking is allowed.
@@ -19,7 +21,7 @@
  - [x] client-side cookies are to be blocked after 1 day if:
        - The user accessed the site from a cross-site link.
        - The final URL the user navigated to contains query strings and fragment id.
-` `
+
 
  -  [Read more about ITP](https://webkit.org/blog/9521/intelligent-tracking-prevention-2-3/)
 
@@ -32,6 +34,7 @@ This will be be our default solution for most of the client swide data, in certa
 The *_JS Storage Access API_* is a relatively new API still in beta to allow third Party sites to request storage access via user-action and a popup of some sorts, this however is not the recommended way. Below you can see example usage of this new API.
 
 ### Storage Access API Request Example
+```javascript
     var promise = document.hasStorageAccess();
     promise.then(
         function (hasAccess) {
@@ -41,7 +44,7 @@ The *_JS Storage Access API_* is a relatively new API still in beta to allow thi
             // Promise was rejected for some reason.
         }
     );
-
+``` 
  -  [Read more about Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/)
 
  ## Other Solutions:
